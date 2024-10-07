@@ -18,6 +18,12 @@ if version > 580
         syntax reset
     endif
 endif
+
+" nvim 0.10 changed many default highlight settings. They include groups that
+" are not explicitly set here. Use the suggested workaround to restore the
+" previous defaults. See `:h news` for more details.
+source $VIMRUNTIME/colors/vim.lua
+
 let g:colors_name="molokai"
 
 if exists("g:molokai_original")
